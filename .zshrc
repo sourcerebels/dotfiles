@@ -90,6 +90,9 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+export EDITOR=vim
+export SOURCES=$HOME/Sources
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -99,20 +102,23 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias dotfiles='/usr/bin/git --git-dir=/home/edu/.dotfiles/ --work-tree=/home/edu'
+alias src='cd $SOURCES'
 alias vi=vim
 
+# Other configurations
+
+# Tilix
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
+  source /etc/profile.d/vte.sh
 fi
 
-export EDITOR=vim
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+# SDKMan
 export SDKMAN_DIR="/home/edu/.sdkman"
-[[ -s "/home/edu/.sdkman/bin/sdkman-init.sh" ]] && source "/home/edu/.sdkman/bin/sdkman-init.sh"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+# Node version manager
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-alias dotfiles='/usr/bin/git --git-dir=/home/edu/.dotfiles/ --work-tree=/home/edu'
