@@ -92,6 +92,9 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR=vim
 export SOURCES=$HOME/Sources
+export QSYNC_ROOT=$HOME/Qsync
+
+export PATH=$PATH:$QSYNC_ROOT/Documents/eurecat/xcare2/scripts
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
