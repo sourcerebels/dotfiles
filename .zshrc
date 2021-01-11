@@ -92,9 +92,7 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR=vim
 export SOURCES=$HOME/Sources
-export QSYNC_ROOT=$HOME/Qsync
-
-export PATH=$PATH:$HOME/bin:$QSYNC_ROOT/Documents/eurecat/xcare2/scripts
+export TOOLS=$HOME/Tools
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -110,6 +108,17 @@ alias src='cd $SOURCES'
 alias vi=vim
 
 # Other configurations
+
+# Qnap Qsync
+export QSYNC_ROOT=$HOME/Qsync
+export PATH=$PATH:$HOME/bin:$QSYNC_ROOT/Documents/eurecat/xcare2/scripts
+
+# Android SDK
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools
+
+# Pidcat
+alias pidcat="$TOOLS/pidcat/pidcat.py"
 
 # Tilix
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
