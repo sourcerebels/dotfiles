@@ -73,51 +73,30 @@ plugins=(git git-extras docker docker-compose sudo zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+# User configuration #
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-export EDITOR=vim
+# Sources directory
 export SOURCES=$HOME/Sources
-export TOOLS=$HOME/Tools
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-alias dotfiles='/usr/bin/git --git-dir=/home/edu/.dotfiles/ --work-tree=/home/edu'
 alias src='cd $SOURCES'
+
+# Tools directory
+export TOOLS=$HOME/Tools
+alias src='cd $SOURCES'
+
+# Vim
+export EDITOR=vim
 alias vi=vim
 
-# Other configurations
+# Dotfiles management
+alias dotfiles='/usr/bin/git --git-dir=/home/edu/.dotfiles/ --work-tree=/home/edu'
 
 # Qnap Qsync
 export QSYNC_ROOT=$HOME/Qsync
-export PATH=$PATH:$HOME/bin:$QSYNC_ROOT/Documents/eurecat/xcare2/scripts
+export PATH=$PATH:$HOME/bin:$QSYNC_ROOT/Scripts/xcare2
 
-# Android SDK
+# Android Development
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools
-
-# Pidcat
 alias pidcat="$TOOLS/pidcat/pidcat.py"
 
 # Tilix
@@ -133,4 +112,3 @@ export SDKMAN_DIR="/home/edu/.sdkman"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
