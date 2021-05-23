@@ -76,7 +76,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration #
 
 # Sources directory
-export SOURCES=$HOME/Sources
+export SOURCES=$HOME/Documents/Sources
 alias src='cd $SOURCES'
 
 # Tools directory
@@ -112,3 +112,5 @@ export SDKMAN_DIR="/home/edu/.sdkman"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+export CHROME_EXECUTABLE=$HOME/bin/google-chrome-unsafe.sh
